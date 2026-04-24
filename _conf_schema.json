@@ -1,0 +1,40 @@
+{
+  "api_key": {
+    "description": "雨云API密钥（X-Api-Key）",
+    "type": "string",
+    "hint": "在雨云控制台获取API密钥",
+    "obvious_hint": true,
+    "default": ""
+  },
+  "access_mode": {
+    "description": "插件使用权限范围",
+    "type": "string",
+    "options": ["admin_only", "admin_and_member", "whitelist"],
+    "labels": ["仅管理员", "管理员和成员", "白名单模式"],
+    "hint": "选择谁可以使用该插件",
+    "default": "admin_only"
+  },
+  "whitelist": {
+    "description": "白名单用户ID列表（access_mode为whitelist时生效）",
+    "type": "list",
+    "items": {"type": "string"},
+    "condition": {"access_mode": "whitelist"},
+    "hint": "填写允许使用插件的用户ID，每行一个",
+    "default": []
+  },
+  "enable_plugin": {
+    "description": "插件总开关",
+    "type": "bool",
+    "default": true
+  },
+  "enable_query": {
+    "description": "查询功能总开关（关闭后所有查询类工具不可用）",
+    "type": "bool",
+    "default": true
+  },
+  "enable_operation": {
+    "description": "操作功能总开关（关闭后所有操作类工具不可用）",
+    "type": "bool",
+    "default": true
+  }
+}
