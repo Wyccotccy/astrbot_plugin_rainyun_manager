@@ -1,0 +1,12 @@
+name: "astrbot_plugin_rainyun_manager"
+display_name: "雨云管理插件"
+author: "Wyccotccy"
+desc: "雨云服务器状态查询与管理插件，支持LLM工具调用和指令操作，涵盖产品、域名、SSL证书、用户、积分等48个API功能"
+version: "1.0.0"
+repo: "https://github.com/Wyccotccy/astrbot_plugin_rainyun_manager"
+support_platforms:
+  - aiocqhttp
+  - qq_official
+  - telegram
+  - wecom
+astrbot_version: ">=4.20.0"
